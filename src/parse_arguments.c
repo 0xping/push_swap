@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:09:49 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/13 17:52:22 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:09:07 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,12 +104,16 @@ static void	get_ints(t_stack **head, char const *el)
 t_stack	*parse_arguments(int ac, char const *av[])
 {
 	t_stack	*stack;
+	char	*argument;
 
 	stack = 0;
+	argument = 0;
 	while (ac > 1)
 	{
-		(!ft_strlen(av[ac - 1])) && ft_exit();
-		get_ints(&stack, av[ac - 1]);
+		argument = ft_strtrim(av[ac - 1], " ");
+		(!ft_strlen(argument)) && ft_exit();
+		get_ints(&stack, argument);
+		free(argument);
 		ac--;
 	}
 	check_duplicates(stack);
