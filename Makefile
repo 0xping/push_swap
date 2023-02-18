@@ -20,7 +20,7 @@ all : $(NAME)
 
 $(NAME) : $(SRC)
 	@echo "$(GREEN)\n⌛ compiling push_swap ...$(END)"
-	@$(CC) $(SRC) -o $(NAME)
+	@$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 	@echo "$(GREEN)✅ push_swap compiled successfully\n$(END)"
 
 clean :
