@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 09:45:31 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/13 09:57:58 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/18 21:30:24 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@
 // sb
 void	op_swap(t_stack **head)
 {
-	t_stack	*node1;
-	t_stack	*node2;
+	void	*first_item_content;
+	void	*second_item_content;
 
 	if (ft_stack_size(*head) > 1)
 	{
-		node1 = ft_stack_peek(*head);
+		first_item_content = ft_stack_peek(*head);
 		ft_stack_pop(head, 0);
-		node2 = ft_stack_peek(*head);
-		ft_stack_push(head, node1->content);
-		ft_stack_push(head, node2->content);
+		second_item_content = ft_stack_peek(*head);
+		ft_stack_pop(head, 0);
+		ft_stack_push(head, first_item_content);
+		ft_stack_push(head, second_item_content);
 	}
 }
 
