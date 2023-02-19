@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:09:49 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/15 17:09:07 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:01:55 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,6 @@ static void	check_duplicates(t_stack *stack)
 		}
 		i = i->next;
 	}
-}
-
-static void	free_tab(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		tab[i] = 0;
-		i++;
-	}
-	free(tab);
 }
 
 static int	arg_to_int(const char *str)
