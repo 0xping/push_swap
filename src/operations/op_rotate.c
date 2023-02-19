@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 12:15:22 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/19 00:42:11 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:16:41 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	op_rotate(t_stack **head, char *op)
 		top_content = ft_stack_peek(*head);
 		ft_stack_pop(head, 0);
 		ft_lstadd_back((t_list **)head, (t_list *)ft_stack_new(top_content));
+		ft_stack_iter(*head, set_index);
+		set_index(0);
 	}
 	if (op)
 		ft_putendl_fd(op, 1);
