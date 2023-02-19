@@ -6,11 +6,18 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:09:49 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/19 16:01:55 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:02:33 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+static void	set_index(void *content)
+{
+	static int	i;
+
+	((t_content *)content)->index = i++;
+}
 
 static void	check_duplicates(t_stack *stack)
 {
@@ -103,5 +110,6 @@ t_stack	*parse_arguments(int ac, char const *av[])
 		ac--;
 	}
 	check_duplicates(stack);
+	ft_stack_iter(stack, set_index);
 	return (stack);
 }
