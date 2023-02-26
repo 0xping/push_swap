@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 18:23:46 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/24 18:42:10 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/26 01:17:45 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,6 @@ static void	fill_lis_helper(int arr[], int size, t_inc_subs **lis_helper)
 	}
 }
 
-typedef struct s_arr
-{
-	int				*arr;
-	int				size;
-}					t_arr;
-
 typedef struct s_args
 {
 	t_inc_subs		*lis_helper;
@@ -93,7 +87,7 @@ void	fill_result(t_arr *result, int arr[], int size, t_args args)
 
 	i = 0;
 	len_index = get_len_index(args.lis_helper, size, args.lis_length);
-	result->arr = malloc(sizeof(int) * args.lis_length);
+	result->arr = malloc(sizeof(int) * (args.lis_length + 1));
 	result->size = args.lis_length;
 	while (len_index > 0)
 	{
