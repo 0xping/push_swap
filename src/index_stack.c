@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_min.c                                          :+:      :+:    :+:   */
+/*   index_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 17:14:59 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/25 17:23:41 by aait-lfd         ###   ########.fr       */
+/*   Created: 2023/03/05 07:16:44 by aait-lfd          #+#    #+#             */
+/*   Updated: 2023/03/05 07:16:46 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-t_stack	*get_min(t_stack *stack)
+void	set_index(void *content)
 {
-	t_stack	*min;
+	static int	i;
 
-	min = stack;
-	while (stack)
-	{
-		if (((t_content *)stack->content)->number < ((t_content *)min->content)->number)
-			min = stack;
-		stack = stack->next;
-	}
-	return (min);
+	if (content == 0)
+		i = 0;
+	else
+		((t_content *)content)->index = i++;
 }

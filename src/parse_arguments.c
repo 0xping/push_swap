@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:09:49 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/26 01:13:44 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/03/05 07:15:58 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,9 @@ static void	get_ints(t_stack **head, char const *el)
 		if (content)
 		{
 			content->number = arg_to_int(ints[i]);
+			content->moves = malloc(2 * sizeof(int));
+			if (!content->moves)
+				exit(1);
 			ft_stack_push(head, content);
 		}
 		i--;

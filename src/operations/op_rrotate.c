@@ -6,11 +6,10 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 12:17:20 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/02/19 17:17:12 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:39:35 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/push_swap.h"
 #include "operations.h"
 // rra
 // rrb
