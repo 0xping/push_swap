@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:30:07 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/03/05 03:50:51 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:09:40 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	push_node_to_top(t_stack **head, t_stack *node, char stack_name)
 	char	*op[2];
 	int		node_content;
 
-	is_rotate = ((t_content *)node->content)->index < ft_stack_size(*head) / 2;
+	is_rotate = ((t_content *)node->content)->index <= ft_stack_size(*head) / 2;
 	op[0] = 0;
 	op[1] = 0;
 	if (stack_name == 'a')
