@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 22:20:28 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/03/01 23:46:31 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:52:56 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,6 @@ int	exec_operation(t_stack **a, t_stack **b, char *op)
 		op_rrr(a, b);
 	else
 		return (0);
-	return (1);
-}
-
-int	is_sorted(t_stack *stack)
-{
-	int	n;
-
-	n = ((t_content *)stack->content)->number;
-	stack = stack->next;
-	while (stack)
-	{
-		if (n > ((t_content *)stack->content)->number)
-			return (0);
-		n = ((t_content *)stack->content)->number;
-		stack = stack->next;
-	}
 	return (1);
 }
 
