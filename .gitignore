@@ -3,6 +3,7 @@ push_swap
 push_swap_visualizer
 checker_Mac
 visualizer
+imgui.ini
 
 # General
 .DS_Store
