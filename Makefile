@@ -48,3 +48,5 @@ fclean : clean
 	@echo "$(RED)🗑️  push_swap removed \n$(END)"
 
 re : fclean all
+
+.PHONY : bonus
