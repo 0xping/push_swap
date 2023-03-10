@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 07:13:07 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/03/06 22:09:42 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/03/10 14:51:51 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	free_tab(char **tab);
 int		ft_exit(void);
 int		includes(int arr[], int size, int value);
-void sort_int_tab(int *arr, int size);
+void	sort_int_tab(int *arr, int size);
 int		abs(int n);
 
 #endif

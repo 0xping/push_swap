@@ -6,7 +6,7 @@
 /*   By: aait-lfd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:20:57 by aait-lfd          #+#    #+#             */
-/*   Updated: 2023/03/07 13:54:09 by aait-lfd         ###   ########.fr       */
+/*   Updated: 2023/03/10 14:53:01 by aait-lfd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ t_stack	*get_min(t_stack *stack);
 void	push_node_to_top(t_stack **head, t_stack *node, char stack_name);
 t_stack	*get_node(t_stack *stack, int n);
 void	filter_stack(t_stack **a, t_stack **b, t_arr *inc);
-int	is_sorted(t_stack *stack);
+int		is_sorted(t_stack *stack);
 
 #endif
